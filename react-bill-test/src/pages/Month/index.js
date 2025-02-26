@@ -1,5 +1,5 @@
 import { NavBar, DatePicker } from 'antd-mobile'
-import { useEffect, useState } from 'react'
+import { use, useEffect, useState } from 'react'
 import './index.scss'
 import classNames from 'classnames'
 import dayjs from 'dayjs'
@@ -10,9 +10,18 @@ import _ from 'lodash'
 const Month = () => {
 
   const [dateVisible ,setDateVisible] = useState(false)
+  const [curDate, setCurDate] = useState(() => {
+    return dayjs(new Date()).format('YYYY-MM')
+  })
   
   
-  
+  const onConfirm = (date) => {
+    setDateVisible(false)
+    const formatDate = dayjs(date).format('YYYY-MM')
+    setCurDate(formatDate)
+    console.log(formatDate);
+    
+  }
   
   
   
@@ -25,7 +34,7 @@ const Month = () => {
         <div className="header">
           {/* 时间切换区域 */}
           <div className="date" onClick={() => setDateVisible(true)}>
-            <span className="text">4月账单</span>
+            <span className="text">{ curDate + '' }月账单</span>
             {/* 思路：根据当前弹框打开的状态控制expand类名是否存在 */}
             <span
               className={classNames('arrow', dateVisible && 'expand')}
@@ -53,7 +62,7 @@ const Month = () => {
             precision="month"
             visible={dateVisible}
             onCancel={() => setDateVisible(false)}
-            onConfirm={() => setDateVisible(false)}
+            onConfirm={onConfirm}
             onClose={() => setDateVisible(false)}
             max={new Date()}
           />
