@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import Layout from '@/page/Layout'
-import New from '@/page/New'
-import Year from '@/page/Year'
-import Month from '@/page/Month'
+import Layout from '@/pages/Layout'
+import New from '@/pages/New'
+import Year from '@/pages/Year'
+import Month from '@/pages/Month'
 
 const router = createBrowserRouter([
   {
