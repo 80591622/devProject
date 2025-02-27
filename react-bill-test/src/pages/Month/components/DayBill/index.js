@@ -3,10 +3,8 @@ import './index.scss'
 import { useMemo } from 'react'
 import { billTypeToName } from '@/contents/index'
 import { useState } from 'react'
-// import Icon from '@/components/Icon'
+import Icon from '@/components/Icon'
 const DailyBill = ({ date, billList }) => {
-  console.log(date, "======date");
-  
 
   const dayResult = useMemo(() => {
     // 计算单日统计
@@ -52,7 +50,7 @@ const DailyBill = ({ date, billList }) => {
           return (
             <div className="bill" key={item.id}>
               {/* 图标 */}
-              {/* <Icon type={item.useFor} /> */}
+              <Icon type={item.useFor} />
               <div className="detail">
                 <div className="billType">{billTypeToName[item.useFor]}</div>
               </div>

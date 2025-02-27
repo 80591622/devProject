@@ -9,11 +9,14 @@ const billStore = createSlice({
   reducers: {
     setBillList(state, action) {
       state.billList = action.payload
+    },
+    addBillList(state, action) {
+      state.billList.push(action.payload)
     }
   }
 })
 
-const { setBillList } = billStore.actions
+const { setBillList, addBillList } = billStore.actions
 
 const getBillList = () => {
   return async(dispatch) => {
@@ -25,5 +28,5 @@ const getBillList = () => {
 
 const reducers = billStore.reducer
 
-export {setBillList, getBillList}
+export {setBillList, getBillList, addBillList}
 export default reducers

@@ -12,7 +12,6 @@ const Month = () => {
   const monthGroup = useMemo(() => {
    return  _.groupBy(billList, item => dayjs(item.date).format('YYYY-MM') )
   }, [billList])
-  console.log(monthGroup, '=====>');
   
   const [dateVisible, setDateVisible] = useState(false)
   const [curDate, setCurDate] = useState(() => {
@@ -32,8 +31,6 @@ const Month = () => {
       total: pay + income
     }
   }, [curMonthList])
-
-  console.log(monthResult, "===========");
   
 
 
@@ -48,10 +45,8 @@ const Month = () => {
 
   const dayGroup = useMemo(() => {
     const groupData = _.groupBy(curMonthList, item => dayjs(item.date).format('YYYY-MM-DD') )
-    console.log(groupData, 'groupData==========>');
     
     const keys = Object.keys(groupData)
-    console.log(keys, 'hhaah');
     
     return  {
       groupData,
@@ -64,7 +59,6 @@ const Month = () => {
     const formatDate = dayjs(date).format('YYYY-MM')
     setCurDate(formatDate)
     setCurMonthList(monthGroup[formatDate])
-    console.log(formatDate)
   }
 
   return (
@@ -111,9 +105,7 @@ const Month = () => {
         </div>
         {/* 单日列表统计 */}
         {
-          dayGroup.keys.map(key => {
-            console.log(key, 'keyyyyyyyyyyy');
-            
+          dayGroup.keys.map(key => {           
             const billList = dayGroup.groupData[key] ? dayGroup.groupData[key] : [];
             return  <DayBill key={key} date={key} billList={billList}/>
           })
