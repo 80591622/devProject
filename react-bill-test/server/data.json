@@ -97,6 +97,50 @@
       "date": "2023-02-28T16:00:00.000Z",
       "useFor": "salary",
       "id": 21
+    },
+    {
+      "type": "pay",
+      "money": -100,
+      "date": "2025-02-04T03:03:15.617Z",
+      "useFor": "drinks",
+      "id": 22
+    },
+    {
+      "type": "pay",
+      "money": -100,
+      "date": "2025-01-02T16:00:00.000Z",
+      "useFor": "food",
+      "id": 23
+    },
+    {
+      "type": "income",
+      "money": 10000,
+      "date": "2025-03-28T16:00:00.000Z",
+      "useFor": "salary",
+      "id": 24
+    },
+    {
+      "type": "income",
+      "money": 1000,
+      "date": "2025-02-26T16:00:00.000Z",
+      "useFor": "salary",
+      "id": 25
+    },
+    {
+      "type": "pay",
+      "money": 1077,
+      "date": "2025-02-11T17:00:00.000Z",
+      "useFor": "drinks",
+      "id": 26
+    },
+    {
+      "type": "pay",
+      "money": 10,
+      "date": "2025-02-02T17:00:00.000Z",
+      "useFor": "drinks",
+      "id": 27
     }
+
+
   ]
 }
