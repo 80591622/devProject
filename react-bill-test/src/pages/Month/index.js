@@ -105,9 +105,10 @@ const Month = () => {
         </div>
         {/* 单日列表统计 */}
         {
-          dayGroup.keys.map(key => {           
+          dayGroup.keys.map((key, index) => {           
             const billList = dayGroup.groupData[key] ? dayGroup.groupData[key] : [];
-            return  <DayBill key={key} date={key} billList={billList}/>
+            const uniqueKey = `day-bill-${index}`;
+            return  <DayBill key={uniqueKey} date={key} billList={billList}/>
           })
         }
         

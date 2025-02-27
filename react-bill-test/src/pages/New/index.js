@@ -34,6 +34,7 @@ const New = () => {
     }
     console.log(data)
     dispatch(addBillList(data))
+    navigate('/month')
   }
   // 存储选择的时间
   const [date, setDate] = useState()
@@ -47,7 +48,7 @@ const New = () => {
   }
   return (
     <div className="keepAccounts">
-      <NavBar className="nav" onBack={() => navigate(-1)}>
+      <NavBar className="nav" onBack={() => navigate('/month')}>
         记一笔
       </NavBar>
 
