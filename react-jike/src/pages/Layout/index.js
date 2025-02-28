@@ -59,7 +59,7 @@ const GeekLayout = () => {
     navigate('/login')
   }
 
-  const name = useSelector(state => state.user.userInfo.name)
+  const name = useSelector(state => state.user.userInfo.username)
   return (
     <Layout>
       <Header className="header">
