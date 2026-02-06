@@ -1,25 +1,9 @@
-import logo from './logo.svg';
+// App.js - React Router 演示项目入口
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // 应用入口由 RouterProvider 处理，这里保持简单
+  return null;
 }
 
 export default App;
