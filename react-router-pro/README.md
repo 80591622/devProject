@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# React Router 演示项目
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个专注于演示React Router核心功能和最佳实践的学习项目，包含了从基础到高级的路由配置和使用示例。
 
-## Available Scripts
+## 项目概述
 
-In the project directory, you can run:
+该项目旨在通过实际代码示例演示React Router的各种核心功能和API用法。项目包含了多个页面和路由配置，展示了不同场景下的路由实现方式。
 
-### `npm start`
+## 涵盖的React Router特性
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 核心功能
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ✅ 基础路由配置
+- ✅ 嵌套路由实现
+- ✅ 路由参数传递
+- ✅ 编程式导航
+- ✅ 路由守卫（权限控制）
 
-### `npm test`
+### 组件演示
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ `BrowserRouter` - 浏览器路由容器
+- ✅ `Routes` - 路由配置容器
+- ✅ `Route` - 路由规则定义
+- ✅ `Link` - 导航链接
+- ✅ `NavLink` - 带激活状态的导航链接
+- ✅ `Outlet` - 嵌套路由出口
+- ✅ `useNavigate` - 编程式导航Hook
+- ✅ `useParams` - 获取路由参数Hook
+- ✅ `useLocation` - 获取当前位置Hook
 
-### `npm run build`
+## 项目结构
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── page/                          # 页面组件
+│   ├── About/                     # 关于页面
+│   ├── Article/                   # 文章页面
+│   ├── Board/                     # 看板页面
+│   ├── Layout/                    # 布局组件
+│   ├── Login/                     # 登录页面
+│   └── NotFound/                  # 404页面
+├── router/                        # 路由配置
+│   └── index.js                   # 路由定义
+├── App.js                         # 应用入口组件
+├── index.js                       # 项目入口文件
+└── App.css                        # 全局样式
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 快速开始
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 安装依赖
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 启动开发服务器
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+应用将在 `http://localhost:3000` 启动
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 构建生产版本
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 运行测试
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm test
+```
 
-### Code Splitting
+## 使用说明
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. 项目展示了完整的路由配置和使用示例
+2. 包含了公共布局组件和多种页面类型
+3. 演示了嵌套路由、路由参数、编程式导航等功能
+4. 可以通过修改`src/router/index.js`来学习不同的路由配置方式
 
-### Analyzing the Bundle Size
+## 学习资源
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [React Router官方文档](https://reactrouter.com/)
+- [React官方文档](https://reactjs.org/)
 
-### Making a Progressive Web App
+## 许可证
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+MIT
 
-### Advanced Configuration
+## 贡献
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+欢迎提交Issue和Pull Request！

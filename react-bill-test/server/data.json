@@ -226,6 +226,12 @@
       "type": "income",
       "money": 200,
       "useFor": "bonus"
+    },
+    {
+      "id": "79ee",
+      "type": "pay",
+      "money": -1000,
+      "useFor": "game"
     }
   ]
 }

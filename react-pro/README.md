@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# React 特性演示项目
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个专注于演示React核心特性和最佳实践的学习项目，包含了从基础到高级的各种React概念实现。
 
-## Available Scripts
+## 项目概述
 
-In the project directory, you can run:
+该项目旨在通过实际代码示例演示React的各种核心特性和API用法。项目包含了多个独立的演示组件，每个组件专注于展示特定的React功能或概念。
 
-### `npm start`
+## 涵盖的React特性
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 类组件相关
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ✅ 类组件基础实现（Counter示例）
+- ✅ 类组件生命周期函数
+- ✅ 类组件通信机制
 
-### `npm test`
+### React Hooks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ `useState` - 状态管理
+- ✅ `useEffect` - 副作用处理
+- ✅ `useMemo` - 记忆化计算
+- ✅ `useCallback` - 记忆化回调函数
+- ✅ `useReducer` - 复杂状态管理
+- ✅ `useRef` - DOM引用和持久化值
+- ✅ `useImperativeHandle` - 自定义暴露给父组件的实例值
+- ✅ `forwardRef` - 转发Ref给子组件
+- ✅ `memo` - 组件记忆化
 
-### `npm run build`
+### 状态管理
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ Zustand基础使用
+- ✅ Zustand切片模式
+- ✅ Zustand异步数据处理
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 项目结构
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+├── App.js                          # 应用入口组件
+├── index.js                        # 项目入口文件
+├── class-实现counter.js           # 类组件计数器示例
+├── class-生命周期函数.js          # 类组件生命周期演示
+├── class-组件通信.js              # 类组件通信示例
+├── forwardRef.js                   # forwardRef API演示
+├── memo-基础用法.js               # memo基础用法
+├── memo-props比较机制.js          # memo props比较机制
+├── useCallback.js                  # useCallback Hook演示
+├── useInperativeHandle.js          # useImperativeHandle Hook演示
+├── useMemo.js                      # useMemo Hook演示
+├── useReducer.js                   # useReducer Hook演示
+├── zustand-基础使用.js             # Zustand基础用法
+├── zustand-切片模式.js             # Zustand切片模式
+└── zustand-异步支持.js             # Zustand异步数据处理
+```
 
-### `npm run eject`
+## 快速开始
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 安装依赖
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 启动开发服务器
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+应用将在 `http://localhost:3000` 启动
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 构建生产版本
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+### 运行测试
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm test
+```
 
-### Analyzing the Bundle Size
+## 使用说明
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. 项目包含多个独立的React特性演示文件
+2. 可以在`App.js`中导入并使用这些演示组件
+3. 每个文件都包含了特定React特性的完整实现和示例
+4. 可以通过修改`App.js`来切换不同的演示内容
 
-### Making a Progressive Web App
+## 学习资源
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React官方文档](https://reactjs.org/)
+- [Zustand官方文档](https://github.com/pmndrs/zustand)
 
-### Advanced Configuration
+## 许可证
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+MIT
 
-### Deployment
+## 贡献
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+欢迎提交Issue和Pull Request！
